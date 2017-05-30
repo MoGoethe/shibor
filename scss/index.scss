@@ -1,0 +1,189 @@
+@import "base";
+/*
+16,142,233
+*/
+.white-bg{
+	background-color:#fff;
+}
+.header{
+	width:100%;
+	background-color:#fff;
+	&:after{
+		@include floatFun();
+	}
+	.logo{
+		height: 56px;
+		float:left;
+		padding-right:20px;
+		line-height: 56px;
+		font-size: 22px;
+		color: #108ee9;
+		border-right:1px solid #ddd;
+		img{
+			vertical-align: middle;
+			display: block;
+		}
+	}
+}
+.gient-screen{
+    position: relative;
+    z-index: 0;
+    color: #fff;
+    background: url(../img/working.jpg) top center no-repeat;
+    background-size: cover;
+    &:before{
+		position: absolute;
+	    content: "";
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    z-index: -1;
+	    background-color: rgba(16,142,233,.85);
+    }
+}
+.welcome{
+	padding:80px 0;
+	.slogin{
+		font-weight:500;
+	}
+	.welcome-slogan{
+		font-size:18px;
+	}	
+}
+.tabs-menu{
+	.list{
+		margin: 0;
+		padding:0;
+		border-top:1px solid #fff;
+		border-left:1px solid #fff;
+		&:after{
+			@include floatFun();
+		}
+		.list-item{
+			display: block;
+			@include box();
+			width:12.5%;
+			height: 40px;
+			float: left;
+			text-align: center;
+			line-height: 40px;
+			transition: all .3s;
+			cursor: pointer;
+			border-right:1px solid #fff;
+			span{
+				font-size: 15px;
+			}
+			&.active{
+				background-color:#fff;
+				color: #108ee9;
+				&:hover{
+					background-color:#fff;
+					color: #108ee9;
+				}
+			}
+			&:hover{
+				background-color:#2c3e50;
+			}
+		}
+	}	
+}
+.main-canvas{
+	padding:50px 0;
+	.container{
+		display: block;
+		height: 0;
+		overflow: hidden;
+		transition: height 1.5s ease-in;
+		&.active{
+			height: auto;
+		}
+	}
+}
+.canvas{
+	width:100%;
+	height:auto;
+	margin-bottom:30px;
+	.canvas-title{
+		border-bottom:1px solid #ccc;
+		color: #666;
+		font-size: 18px;
+		font-weight: 500;
+		padding:10px 0;
+	}
+	.canvas-main{
+		padding:15px 0;
+		.canvas-row{
+			margin-bottom: 30px;
+			&:after{
+				@include floatFun();
+			}
+			.mid-canvas{
+				@include box();
+				
+				&:first-child{
+					padding-right:15px;
+				}
+				&:last-child{
+					padding-left:15px;
+				}
+			}
+			.sm-canvas{
+				
+			}
+		}
+		.big-canvas{
+			width:100%;
+			height: 300px;
+		}
+		.mid-canvas{
+			width: 50%;
+			height: 300px;
+			float: left;
+		}
+		.sm-canvas{
+			width: 25%;
+			@include box();
+			height: 250px;
+			padding:15px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+	background-color:#108ee9;
+	.copy-right{
+		color: #fff;
+		font-size: 12px;
+		font-weight: 400;
+		padding:15px 0;
+		text-align: center;
+		margin: 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
