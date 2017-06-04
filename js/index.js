@@ -2,7 +2,6 @@ var shibor_s1 = echarts.init(document.getElementById('s1'),'macarons');
 var shibor_s2 = echarts.init(document.getElementById('s2'),'macarons'); 
 var shibor_s3 = echarts.init(document.getElementById('s3'),'macarons');
 var shibor_s4 = echarts.init(document.getElementById('s4'),'macarons'); 
-var shibor_s5 = echarts.init(document.getElementById('s5'),'macarons'); 
         
 var option_s1 = {
     title : {
@@ -368,11 +367,8 @@ var option_s4 = {
 };
                     
                     
-var option_s5 =option_s4;
-                    
 // 为echarts对象加载数据 
 shibor_s1.setOption(option_s1); 
 shibor_s2.setOption(option_s2); 
 shibor_s3.setOption(option_s3); 
 shibor_s4.setOption(option_s4); 
-shibor_s5.setOption(option_s5); 

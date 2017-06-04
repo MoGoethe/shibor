@@ -5,6 +5,8 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     concat = require('gulp-concat'),
+    connect = require('gulp-connect'),
+    _Proxy = require('http-proxy-middleware'),
     notify = require('gulp-notify');
 
 gulp.task('styles',function(){//创建一个任务
@@ -18,6 +20,22 @@ gulp.task('styles',function(){//创建一个任务
     .pipe(gulp.dest('./css'))
     .pipe(notify('css  style task complete'))
 })
+
+gulp.task("server", function () {
+    connect.server({
+        root: "./",
+        port: 8000,
+        livereload: true,
+        middleware: function(connect, opt) {
+            return [
+                _Proxy('/api',  {
+                    target: 'http://www.financedatas.com/',
+                    changeOrigin:true
+                })
+            ]
+        }
+    });
+});
 
 gulp.task('default',function(){//开启一个默认任务
     gulp.start('styles');
